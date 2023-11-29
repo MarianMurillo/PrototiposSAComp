@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
   <!-- IonIcons -->
@@ -26,11 +27,12 @@
  <!--Login and register start-->
  
  <div class="wrapper">
-  <div class="title-text">
-    <div class="title login">Login Form</div>
-    <div class="title signup">Signup Form</div>
-  </div>
+
+ 
   <div class="form-container">
+
+    <div class="center-slide">
+
     <div class="slide-controls">
       <input type="radio" name="slide" id="login" checked>
       <input type="radio" name="slide" id="signup">
@@ -38,34 +40,77 @@
       <label for="signup" class="slide signup">Registrarse</label>
       <div class="slider-tab"></div>
     </div>
+
+</div>
+
+
     <div class="form-inner">
+      
       <form action="#" class="login">
+
+        <div class="logininfoadd">
+          <div class="logininfo">
+            AGENDA TU  <span style="color: #455BA5; font-size: 30px;  font-family: 'Inter', sans-serif; font-weight: bolder;">CITA</span>
+            <div class="loginmoreinfo">
+              ¡Ahorra tiempo y agenda tu cita en <br> línea ahora mismo!
+            </div>
+          </div>
+        </div>
+
+
         <div class="field">
-          <input type="text" placeholder="Email Address" required>
+          <input type="text" placeholder="Usuario" required>
         </div>
         <div class="field">
-          <input type="password" placeholder="Password" required>
+          <input type="password" placeholder="Contraseña" required>
         </div>
-        <div class="pass-link"><a href="#">Forgot password?</a></div>
         <div class="field btn">
           <div class="btn-layer"></div>
-          <input type="submit" value="Login">
+          <input type="submit" value="INGRESAR">
         </div>
-        <div class="signup-link">Not a member? <a href="">Signup now</a></div>
+        <div class="pass-link"><a href="#">¿Olvidó su contraseña?</a></div> 
       </form>
+
       <form action="#" class="signup">
-        <div class="field">
-          <input type="text" placeholder="Email Address" required>
+        <div class="singupinfoadd">
+          <div class="singupinfo">
+            Registre su  <span style="color: #455BA5; font-size: 30px;  font-family: 'Inter', sans-serif; font-weight: bolder;">Cuenta</span>
+            <div class="signupmoreinfo">
+              ¡Ahorra tiempo y agenda tu cita en <br> línea ahora mismo!
+            </div>
+          </div>
         </div>
-        <div class="field">
-          <input type="password" placeholder="Password" required>
+    <br>
+    
+        <div class="form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre completo">
         </div>
-        <div class="field">
-          <input type="password" placeholder="Confirm password" required>
-        </div>
+        <br>
+        
+        <div class="form-group">
+          <input type="text" name="idUser" class="form-control" id="idUser" placeholder="Cédula o pasaporte">
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="text" name="phoneUser" class="form-control" id="phoneUser" placeholder="Teléfono">
+    </div>
+    <br>
+    <div class="form-group">
+      <input type="text" name="addressUser" class="form-control" id="addressUser" placeholder="Dirección">
+  </div>
+  <br>
+  <div class="form-group">
+    <input type="text" name="emailUser" class="form-control" id="emailUser" placeholder="Coreo electrónico">
+</div>
+<br>
+<div class="form-group">
+  <input type="password" name="passwordUser" class="form-control" id="passwordUser" placeholder="Contraseña">
+</div>
+
+      
         <div class="field btn">
           <div class="btn-layer"></div>
-          <input type="submit" value="Signup">
+          <input type="submit" value="Registrarse">
         </div>
       </form>
     </div>
@@ -74,7 +119,9 @@
 
  <!--Login and register end-->
 
-
+<!--Script start-->
  <script src="../dist/js/login.js"></script>
+
+        
 </body>
 </html>
