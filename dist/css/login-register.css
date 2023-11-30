@@ -289,22 +289,30 @@ input:valid {
 @media (max-width: 480px) {
   .wrapper{
     overflow: hidden;
-    width: 450px;
+    width: 350px;
     height: 600px;
     background: #fff;
     padding: 30px;
     box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
-    margin-top: -600px;
+    margin-top: -450px;
     margin-left: 30px;
   }
 
-  .imgWomen{
-    visibility: hidden;
-  }
+  .imageCalen{
+    margin-top: 100px;
+  } 
 
   body{
     background-repeat: no-repeat;
     background-size: auto;
   }
+
+  .imageCalen{
+    margin-left: -30px;
+    margin-top: -60px;
+  }
+
+
+
 
 }
