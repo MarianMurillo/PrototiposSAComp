@@ -53,7 +53,7 @@
 
     <div class="form-inner">
       <!--Login form start-->
-      <form id="quickForm" class="login" action="#">
+      <form  class="login" action="#">
 
         <div class="logininfoadd">
           <div class="logininfo">
@@ -64,10 +64,10 @@
           </div>
         </div>
         <div class=" form-group field">
-          <input type="text" placeholder="Usuario" name="user" required>
+          <input type="text" placeholder="Usuario" name="user" required minlength="5">
         </div>
         <div class="form-group field">
-          <input type="password" placeholder="Contraseña" name="password" required>
+          <input type="password" placeholder="Contraseña" name="password" required minlength="5">
         </div>
         <div class="field btn">
           <div class="btn-layer"></div>
@@ -77,7 +77,7 @@
       </form> <!--Login form end-->
       
       <!--Signup form start-->
-      <form action="#" id="quickForm1" class="signup">
+      <form action="#"  class="signup">
         <div class="singupinfoadd">
           <div class="singupinfo">
             Registre su  <span style="color: #455BA5; font-size: 30px;  font-family: 'Inter', sans-serif; font-weight: bolder;">Cuenta</span>
@@ -87,22 +87,22 @@
           </div>
         </div>
         <div class="form-group field1">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre completo">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre completo"  required minlength="5">
         </div>
         <div class="form-group field1">
-          <input type="text" name="idCard" class="form-control" id="idCard" placeholder="Cédula o pasaporte">
+          <input type="text" name="idCard" class="form-control" id="idCard" placeholder="Cédula o pasaporte" required minlength="9">
         </div>
         <div class="form-group field1">
-          <input type="number" name="phone" class="form-control" id="phone" placeholder="Teléfono">
+          <input type="number" name="phone" class="form-control" id="phone" placeholder="Teléfono" required minlength="8" >
         </div>
         <div class="form-group field1">
-          <input type="text" name="address" class="form-control" id="address" placeholder="Dirección">
+          <input type="text" name="address" class="form-control" id="address" placeholder="Dirección" required minlength="5">
         </div>
         <div class="form-group field1">
-          <input type="text" name="email" class="form-control" id="email" placeholder="Coreo electrónico">
+          <input type="email" name="email" class="form-control" id="email" placeholder="Coreo electrónico" required>
         </div>
         <div class="form-group field1">
-          <input type="password" name="password" class="form-control" id="password" placeholder="Contraseña">
+          <input type="password" name="password" class="form-control" id="password" placeholder="Contraseña" required minlength="6">
         </div>
         <div class="field btn">
           <div class="btn-layer">
@@ -114,138 +114,17 @@
   </div>
 </div><!--Login and register end-->
 
+<div class="imageCalendar">
+<img class="imageCalen" src="/dist/img/backcalendar.png" alt="calendarseptember">
+
+</div>
+
+
 <!--Script start-->
 <script src="../dist/js/login.js"></script>
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- jquery-validation -->
-<script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="../plugins/jquery-validation/additional-methods.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../dist/js/adminlte.min.js"></script>
 
-<!-- validate login form -->
-<script>
-    $(function () {
-        $.validator.setDefaults({
-            submitHandler: function () {
-                alert( "Formulario correcto!" );
-            }
-        });
-        $('#quickForm').validate({
-            rules: {
-                user: {
-                    required: true,
-                    minlength: 5
-                },
-                password: {
-                    required: true,
-                    minlength: 5
-                }
 
-            },
-            messages: {
-                user: {
-                    required: "Ingrese un usuario",
-                    minlength:"Ingrese un usuario de almenos 5 caracteres"
-                },
-                password: {
-                    required: "Ingrese una contraseña",
-                    minlength: "tu contraseña debe se de más de 5 caracteres"
-                }
-            },
-            errorElement: 'span',
-            errorPlacement: function (error, element) {
-                error.addClass('invalid-feedback');
-                element.closest('.form-group').append(error);
-            },
-            highlight: function (element, errorClass, validClass) {
-                $(element).addClass('is-invalid');
-            },
-            unhighlight: function (element, errorClass, validClass) {
-                $(element).removeClass('is-invalid');
-            }
-        });
-    });
-</script>
-<!--validate signup form-->
-<script>
-  $(function () {
-      $.validator.setDefaults({
-          submitHandler: function () {
-              alert( "Formulario correcto!" );
-          }
-      });
-      $('#quickForm1').validate({
-          rules: {
-              name: {
-                  required: true,
-                  minlength:5
-              },
-              idCard: {
-                    required: true,
-                    minlength: 9
-              },
-              phone:{
-                required: true,
-                minlength:8,
-                number:true
-              },
-              address:{
-                required: true,
-                minlength:5
-              },
-              email:{
-                required:true,
-                email:true
-              },
-              password: {
-                    required: true,
-                    minlength: 5
-              }
-          },
-          messages: {
-              name: {
-                  required: "Ingrese su nombre completo",
-                  minlength:"Ingrese su nombre completo de almenos 5 caracteres"
-              },
-              idCard: {
-                    required: "Ingrese su cédula o pasaporte",
-                    minlength:"Ingrese almenos 9 caracteres"
-              },
-              phone: {
-                    required: "Ingrese número de teléfono",
-                    minlength:"Ingrese almenos 8 dígitos",
-                    number:"Ingrese solo números"
-              },
-              address: {
-                  required: "Ingrese su dirección de domicilio",
-                  minlength:"Ingrese su dirección de almenos 5 caracteres"
-              },
-              email: {
-                  required: "Ingrese su correo electrónico",
-                  email:"Ingrese un correo electrónico válido"
-              },
-              password: {
-                    required: "Ingrese una contraseña",
-                    minlength: "tu contraseña debe se de más de 5 caracteres"
-              }
-          },
-          errorElement: 'span',
-          errorPlacement: function (error, element) {
-              error.addClass('invalid-feedback');
-              element.closest('.form-group').append(error);
-          },
-          highlight: function (element, errorClass, validClass) {
-              $(element).addClass('is-invalid');
-          },
-          unhighlight: function (element, errorClass, validClass) {
-              $(element).removeClass('is-invalid');
-          }
-      });
-  });
-</script>
 </body>
 </html>
