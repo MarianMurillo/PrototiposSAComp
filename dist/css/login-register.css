@@ -1,6 +1,6 @@
 body{
     background-image:url("/dist/img/fondo.png") ;
-    width: 110px;
+    width: 100px;
 }
 
 .imgWomen{
@@ -20,7 +20,7 @@ body{
 .wrapper{
   overflow: hidden;
   width: 400px;
-  height: 510px;
+  height: flex;
   background: #fff;
   padding: 30px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
@@ -124,16 +124,25 @@ input[type="radio"]{
 .form-inner form .field{
   height: 50px;
   width: 100%;
-  margin-top: 20px;
 }
 .form-inner form .field input{
   height: 95%;
+  width: 90%;
+  outline: none;
+  margin-left: 25px;
+  padding-left: 15px;
+  border: 1px solid lightgrey;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+.form-inner form .field1 input{
+  height: 4%;
   width: 80%;
   outline: none;
   margin-left: 35px;
   padding-left: 15px;
   border: 1px solid lightgrey;
-  border-bottom-width: 2px;
   font-size: 12px;
   transition: all 0.3s ease;
   font-family: 'Poppins', sans-serif;

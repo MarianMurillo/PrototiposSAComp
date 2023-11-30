@@ -17,7 +17,14 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/login-register.css">
-
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <script
+          src="https://kit.fontawesome.com/64d58efce2.js"
+          crossorigin="anonymous"
+  ></script>
 
 </head>
 
@@ -45,8 +52,8 @@
 
 
     <div class="form-inner">
-      
-      <form action="#" class="login">
+      <!--Login form start-->
+      <form id="quickForm" class="login" action="#">
 
         <div class="logininfoadd">
           <div class="logininfo">
@@ -56,22 +63,21 @@
             </div>
           </div>
         </div>
-
-
-        <div class="field">
-          <input type="text" placeholder="Usuario" required>
+        <div class=" form-group field">
+          <input type="text" placeholder="Usuario" name="user" required>
         </div>
-        <div class="field">
-          <input type="password" placeholder="Contraseña" required>
+        <div class="form-group field">
+          <input type="password" placeholder="Contraseña" name="password" required>
         </div>
         <div class="field btn">
           <div class="btn-layer"></div>
           <input type="submit" value="INGRESAR">
         </div>
         <div class="pass-link"><a href="#">¿Olvidó su contraseña?</a></div> 
-      </form>
-
-      <form action="#" class="signup">
+      </form> <!--Login form end-->
+      
+      <!--Signup form start-->
+      <form action="#" id="quickForm1" class="signup">
         <div class="singupinfoadd">
           <div class="singupinfo">
             Registre su  <span style="color: #455BA5; font-size: 30px;  font-family: 'Inter', sans-serif; font-weight: bolder;">Cuenta</span>
@@ -80,48 +86,166 @@
             </div>
           </div>
         </div>
-    <br>
-    
-        <div class="form-group">
+        <div class="form-group field1">
             <input type="text" name="name" class="form-control" id="name" placeholder="Nombre completo">
         </div>
-        <br>
-        
-        <div class="form-group">
-          <input type="text" name="idUser" class="form-control" id="idUser" placeholder="Cédula o pasaporte">
-      </div>
-      <br>
-      <div class="form-group">
-        <input type="text" name="phoneUser" class="form-control" id="phoneUser" placeholder="Teléfono">
-    </div>
-    <br>
-    <div class="form-group">
-      <input type="text" name="addressUser" class="form-control" id="addressUser" placeholder="Dirección">
-  </div>
-  <br>
-  <div class="form-group">
-    <input type="text" name="emailUser" class="form-control" id="emailUser" placeholder="Coreo electrónico">
-</div>
-<br>
-<div class="form-group">
-  <input type="password" name="passwordUser" class="form-control" id="passwordUser" placeholder="Contraseña">
-</div>
-
-      
-        <div class="field btn">
-          <div class="btn-layer"></div>
-          <input type="submit" value="Registrarse">
+        <div class="form-group field1">
+          <input type="text" name="idCard" class="form-control" id="idCard" placeholder="Cédula o pasaporte">
         </div>
-      </form>
+        <div class="form-group field1">
+          <input type="number" name="phone" class="form-control" id="phone" placeholder="Teléfono">
+        </div>
+        <div class="form-group field1">
+          <input type="text" name="address" class="form-control" id="address" placeholder="Dirección">
+        </div>
+        <div class="form-group field1">
+          <input type="text" name="email" class="form-control" id="email" placeholder="Coreo electrónico">
+        </div>
+        <div class="form-group field1">
+          <input type="password" name="password" class="form-control" id="password" placeholder="Contraseña">
+        </div>
+        <div class="field btn">
+          <div class="btn-layer">
+            <input type="submit" value="Registrarse">
+          </div>
+        </div>
+      </form> <!--Signup form end-->
     </div>
   </div>
-</div>
-
- <!--Login and register end-->
+</div><!--Login and register end-->
 
 <!--Script start-->
- <script src="../dist/js/login.js"></script>
+<script src="../dist/js/login.js"></script>
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- jquery-validation -->
+<script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="../plugins/jquery-validation/additional-methods.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
 
-        
+<!-- validate login form -->
+<script>
+    $(function () {
+        $.validator.setDefaults({
+            submitHandler: function () {
+                alert( "Formulario correcto!" );
+            }
+        });
+        $('#quickForm').validate({
+            rules: {
+                user: {
+                    required: true,
+                    minlength: 5
+                },
+                password: {
+                    required: true,
+                    minlength: 5
+                }
+
+            },
+            messages: {
+                user: {
+                    required: "Ingrese un usuario",
+                    minlength:"Ingrese un usuario de almenos 5 caracteres"
+                },
+                password: {
+                    required: "Ingrese una contraseña",
+                    minlength: "tu contraseña debe se de más de 5 caracteres"
+                }
+            },
+            errorElement: 'span',
+            errorPlacement: function (error, element) {
+                error.addClass('invalid-feedback');
+                element.closest('.form-group').append(error);
+            },
+            highlight: function (element, errorClass, validClass) {
+                $(element).addClass('is-invalid');
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                $(element).removeClass('is-invalid');
+            }
+        });
+    });
+</script>
+<!--validate signup form-->
+<script>
+  $(function () {
+      $.validator.setDefaults({
+          submitHandler: function () {
+              alert( "Formulario correcto!" );
+          }
+      });
+      $('#quickForm1').validate({
+          rules: {
+              name: {
+                  required: true,
+                  minlength:5
+              },
+              idCard: {
+                    required: true,
+                    minlength: 9
+              },
+              phone:{
+                required: true,
+                minlength:8,
+                number:true
+              },
+              address:{
+                required: true,
+                minlength:5
+              },
+              email:{
+                required:true,
+                email:true
+              },
+              password: {
+                    required: true,
+                    minlength: 5
+              }
+          },
+          messages: {
+              name: {
+                  required: "Ingrese su nombre completo",
+                  minlength:"Ingrese su nombre completo de almenos 5 caracteres"
+              },
+              idCard: {
+                    required: "Ingrese su cédula o pasaporte",
+                    minlength:"Ingrese almenos 9 caracteres"
+              },
+              phone: {
+                    required: "Ingrese número de teléfono",
+                    minlength:"Ingrese almenos 8 dígitos",
+                    number:"Ingrese solo números"
+              },
+              address: {
+                  required: "Ingrese su dirección de domicilio",
+                  minlength:"Ingrese su dirección de almenos 5 caracteres"
+              },
+              email: {
+                  required: "Ingrese su correo electrónico",
+                  email:"Ingrese un correo electrónico válido"
+              },
+              password: {
+                    required: "Ingrese una contraseña",
+                    minlength: "tu contraseña debe se de más de 5 caracteres"
+              }
+          },
+          errorElement: 'span',
+          errorPlacement: function (error, element) {
+              error.addClass('invalid-feedback');
+              element.closest('.form-group').append(error);
+          },
+          highlight: function (element, errorClass, validClass) {
+              $(element).addClass('is-invalid');
+          },
+          unhighlight: function (element, errorClass, validClass) {
+              $(element).removeClass('is-invalid');
+          }
+      });
+  });
+</script>
 </body>
 </html>
