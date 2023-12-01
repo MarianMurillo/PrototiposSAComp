@@ -288,7 +288,7 @@ input:valid {
 
 
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .wrapper{
     margin-left: 50px;
     width: 550px;
