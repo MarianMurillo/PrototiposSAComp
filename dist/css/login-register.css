@@ -286,13 +286,17 @@ input:valid {
   position: relative;
 }
 
+.spanlogin{
+  color: #455BA5; font-size: 30px;  font-family: 'Inter', sans-serif; font-weight: bolder;
+}
 
 
+/*media querys*/
 @media (max-width: 320px) {
   .wrapper{
     margin-left: 50px;
     width: 550px;
-    height: 850px;
+    height: 900px;
   }
 
   .imgWomen{
@@ -307,6 +311,52 @@ input:valid {
     background-image: none;
   }
 
+  .logininfo{
+    font-family: 'Inter', sans-serif;
+    color: #455BA5;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .loginmoreinfo{
+    margin-top: 15px;
+    color: #004080;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 25px;
+  }
 
+  .spanlogin{
+    font-size: 40px;
+  }
+
+  .form-inner form .field{
+    height: 95px;
+    margin-top: 30px;
+  }
+
+  .form-inner form .field input{
+  
+    font-size: 23px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  form .btn .btn-layer{
+    width: 450px;
+    height: 70px;
+  }
+
+  .form-inner form .field1 input{
+    height: 70px;
+    width: 430px;
+  }
+
+  .slide-controls .slide{
+    font-size: 13px;
+  }
+
+  .form-inner form .pass-link{
+    margin-left: 170px;
+  }
 
 }
