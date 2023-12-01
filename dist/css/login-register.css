@@ -291,11 +291,21 @@ input:valid {
 @media (max-width: 576px) {
   .wrapper{
     padding: 30px 15px 33px 15px;
-    margin-left: 100px;
+    margin-left: 50px;
     margin-top: -630px;
   }
 
   .imgWomen{
     visibility: hidden;
   }
+
+  .imageCalen{
+    visibility: hidden;
+  }
+  body{
+    background-image: none;
+  }
+
+
+
 }
