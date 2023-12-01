@@ -381,3 +381,32 @@ input:valid {
   }
 
 }
+
+
+@media (max-width: 768px){
+  body{
+    width: 400px;
+    background-repeat: no-repeat;
+    background-image: url("/dist/img/tabletbk.png");
+  }
+
+  .wrapper{
+    margin-top: -600px;
+    margin-left: 50px;
+  }
+
+  .imgWomen{
+  visibility: hidden;
+  }
+
+  .imageCalen{
+    margin-left: -30px;
+    margin-top: -43px;
+  }
+
+  .form-inner form .pass-link{
+    margin-left: 100px;
+  }
+
+
+}
