@@ -288,11 +288,11 @@ input:valid {
 
 
 
-@media (max-width: 576px) {
+@media (max-width: 320px) {
   .wrapper{
-    padding: 30px 15px 33px 15px;
     margin-left: 50px;
-    margin-top: -630px;
+    width: 550px;
+    height: 850px;
   }
 
   .imgWomen{
@@ -302,6 +302,7 @@ input:valid {
   .imageCalen{
     visibility: hidden;
   }
+ 
   body{
     background-image: none;
   }
