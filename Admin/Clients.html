@@ -114,15 +114,12 @@
         <div class="row">
          <!-- /.contain Here  -->
          <div class="col-4">
+            <h5>Clientes <label></label> <i class='fas fa-plus-circle'></i> </h5>
                 <div class="card-tools">
-                    <div class="input-group input-group-sm" style="width: 300px;">
-                    <input type="text" name="table_search" class="form-control float-right">
-
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-default">
-                        <i class="fas fa-search"></i>
-                        </button>
-                    </div>
+                    <div class="input-group input-group-sm" style="width: flex;">
+                    <input type="text" name="table_search" class="form-control float-right"><i>
+                        <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </i>
                     </div>
                 </div>
               
@@ -143,6 +140,180 @@
               </div>
               
             <!-- /.card -->
+          </div>
+          <div class="col-8">
+            <div class="card1">
+              <ul class="nav nav-pills mb-3 shadow-sm" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link1 active" id="pills-profile-tab" data-toggle="pill" href="#profile" role="tab" aria-controls="pills-home" aria-selected="true">Perfil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link1" id="pills-dates-tab" data-toggle="pill" href="#dates" role="tab" aria-controls="pills-profile" aria-selected="false">Citas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link1" id="pills-process-tab" data-toggle="pill" href="#process" role="tab" aria-controls="pills-contact" aria-selected="false">Seguimiento</a>
+                </li>
+              </ul>
+        
+              <!-- content -->
+              <div class="tab-content" id="pills-tabContent p-3">
+                <!-- 1st card -->
+                <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="pills-home-tab">
+                  <i class="fas fa-pen"></i>
+                  <form>
+                    <div class="form-group row">
+                      <label for="staticphone" class="col-sm-4 col-form-label"><i class='fas fa-phone-alt'></i>Teléfono</label>
+                      <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="staticphone">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="staticemail" class="col-sm-4 col-form-label"><i class='fas fa-envelope'></i>Correo</label>
+                      <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="staticemail">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="staticIdCard" class="col-sm-4 col-form-label"><i class='far fa-id-card'></i>Cédula/Pasaporte</label>
+                      <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="staticIdCard">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="staticUbication" class="col-sm-4 col-form-label"><i class='fas fa-map-marker-alt'></i>Ubicación</label>
+                      <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="staticUbication">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- 2nd card -->
+                <div class="tab-pane fade" id="dates" role="tabpanel" aria-labelledby="pills-profile-tab">
+                  <div class="input-group input-group-sm" style="width: flex;">
+                    <input type="text" name="table_search" class="form-control float-right"><i>
+                        <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </i>
+                    </div>
+                  <br>  
+                  <label><input class="form-control amount" placeholder="Fecha"/></label>
+                  <label>
+                    <select class="form-control round" id="exampleFormControlSelect1">
+                    <option value="" disabled selected>Estado</i></option>
+                    <option class="">Atendida</option>
+                    <option class="amount">Agendada</option>
+                    <option class="amount">Sugerida</option>
+                    <option class="amount">Cancelada</option>
+                  </select></label>
+                  <label><button class="btn btn-success">Filtrar</button></label>
+                 
+                 <div class="card1">
+                  <div class="card-body p-0">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Id</th>
+                          <th>Fecha</th>
+                          <th>Hora</th>
+                          <th>Colaborador</th>
+                          <th>Estado</th>
+                          <th>Servicio</th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>13</td>
+                          <td>18/10/22</td>
+                          <td>9:00</td>
+                          <td>Ana Cordoba Coto</td>
+                          <td>Atendida</td>
+                          <td>TI</td>
+                          <td><i class='far fa-eye'></i></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>134</td>
+                          <td>18/11/22</td>
+                          <td>9:00</td>
+                          <td>Ana Cordoba Coto</td>
+                          <td>Agendada</td>
+                          <td>TI</td>
+                          <td><i class='far fa-eye'></i></td>
+                          <td><i class="fas fa-times"></i></td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+                </div>
+                <!-- 3nd card -->
+                <div class="tab-pane fade" id="process" role="tabpanel" aria-labelledby="pills-profile-tab">
+                  <div class="input-group input-group-sm" style="width: flex;">
+                    <input type="text" name="table_search" class="form-control float-right"><i>
+                        <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </i>
+                    </div>
+                  <br>  
+                  
+                  <label>
+                    <select class="form-control round" id="exampleFormControlSelect1">
+                    <option value="" disabled selected>Estado</i></option>
+                    <option class="">Atendido</option>
+                    <option class="amount">Agendado</option>
+                    <option class="amount">Por Agendar</option>
+                    <option class="amount">Finalizado</option>
+                  </select></label>
+                  <label><button class="btn btn-success">Filtrar</button></label>
+                 
+                 <div class="card1">
+                  <div class="card-body p-0">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Id</th>
+                          <th>Fecha</th>
+                          <th>Colaborador</th>
+                          <th>Estado</th>
+                          <th>Problema</th>
+                          <th>Necesidad</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>13</td>
+                          <td>18/10/22</td>
+                          <td>Ana Cordoba Coto</td>
+                          <td>Por Agendar</td>
+                          <td>TI</td>
+                          <td>Reparación</td>
+                          <td><i class='far fa-eye'></i></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>134</td>
+                          <td>18/11/22</td>
+                          <td>Ana Cordoba Coto</td>
+                          <td>Agendado</td>
+                          <td>TI</td>
+                          <td>Revisión</td>
+                          <td><i class='far fa-eye'></i></td>
+                          <td></td>
+                        </tr>
+                        
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+
           </div>
 
 
@@ -168,10 +339,23 @@
 </div>
 <!-- ./wrapper -->
 <script>
-    function ShowContain() {
-  // Mostramos un mensaje en la consola
-  console.log("Se ha hecho clic en el título 1");
-}
+   function ShowContain() {
+    let textInput = document.getElementById('staticphone');
+    let text = '89754534';
+    textInput.value = text;
+    
+    let textEmail=document.getElementById('staticemail');
+    let textE='marta.gomez@gmail.com';
+    textEmail.value=textE;
+
+    let textIdCard=document.getElementById('staticIdCard');
+    let textId='302930432';
+    textIdCard.value=textId;
+
+    let textUbication=document.getElementById('staticUbication');
+    let textU='Cartago, Costa Rica';
+    textUbication.value=textU;
+  }
 </script>
 <!-- REQUIRED SCRIPTS -->
 
