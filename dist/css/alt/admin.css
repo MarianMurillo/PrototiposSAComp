@@ -1,3 +1,4 @@
+/*Dashboard*/
 i.fa.fa-comment {
     color: #B3B3B3;
 }
@@ -18,4 +19,31 @@ i.fas.fa-sign-out-alt {
 i.fas.fa-bars{
     color: #B3B3B3;
 }
-
+div.content-wrapper{
+    background-color:white;
+}
+/*Clients*/
+table.table-hover.text-nowrap{
+    border: none;
+}
+input.form-control.float-right{
+    background-color:#E3E7F0;
+    border-radius: 60px;
+}
+div.input-group-append{
+   border: none;
+}
+div.input-group{
+    background-color:transparent;
+   
+}
+div.col-4{
+    border: none;
+}
+button.btn.btn-default{
+    background-color:transparent;
+    border: none;
+}
+i.fas.fa-search{
+    color: #B3B3B3;
+}

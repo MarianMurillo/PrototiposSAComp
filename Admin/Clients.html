@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminDashboard</title>
+  <title>Clients</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -113,7 +113,37 @@
       <div class="container-fluid">
         <div class="row">
          <!-- /.contain Here  -->
+         <div class="col-4">
+                <div class="card-tools">
+                    <div class="input-group input-group-sm" style="width: 300px;">
+                    <input type="text" name="table_search" class="form-control float-right">
 
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    </div>
+                </div>
+              
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <tbody>
+                    <tr>
+                      <td onclick="ShowContain()">Marta Gómez Pérez</td>
+                    </tr>
+                    <tr>
+                      <td>Julio Salmerón Cordero</td>
+                    <tr>
+                      <td>Marco Durán Cortés</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+            <!-- /.card -->
+          </div>
 
 
 
@@ -137,7 +167,12 @@
   </footer>
 </div>
 <!-- ./wrapper -->
-
+<script>
+    function ShowContain() {
+  // Mostramos un mensaje en la consola
+  console.log("Se ha hecho clic en el título 1");
+}
+</script>
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
@@ -149,7 +184,6 @@
 
 <!-- OPTIONAL SCRIPTS -->
 <script src="../plugins/chart.js/Chart.min.js"></script>
-<!-- AdminLTE for demo purposes -->
 <script src="../dist/js/pages/dashboard3.js"></script>
 </body>
 </html>
