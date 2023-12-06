@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SuggestDate</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- IonIcons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="../dist/css/alt/date.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- X -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="title">
+                <label>Sugerir Cita</label>
+                <label>Proceso ID: 13</label>
+            </div>
+            <br>
+            <br>
+
+            <div class="tabs">
+                <div class="tab active">Ubicación</div>
+                <div class="tab">Servicio</div>
+                <div class="tab">Fecha y Hora</div>
+                <div class="tab">Confirmación</div>
+            </div>
+        
+            <div class="tab-content">
+
+                  <label class="select">
+                    <select class="form-control round" id="exampleFormControlSelect1">
+                    <option value="" disabled selected>Provincia</i></option>
+                    <option class="">Cartago</option>
+                    <option class="amount">San José</option>
+                    <option class="amount">Heredia</option>
+                    <option class="amount">Puntarenas</option>
+                  </select></label>
+                  <label class="select">
+                    <select class="form-control round" id="exampleFormControlSelect1">
+                    <option value="" disabled selected>Socursal</i></option>
+                    <option class="">Avenida10</option>
+                    <option class="amount">Avenida11</option>
+                  </select></label>  
+            </div>
+        
+            <div class="tab-content hide">
+                <label >
+                <input style="width:560px;" class="form-control round"  type="date" id="start" name="trip-start" value="Date" min="2023-12-6" max="2030-12-31" />
+                </label>
+                  <label class="select">
+                    <select class="form-control round" id="exampleFormControlSelect1">
+                    <option value="" disabled selected>Profesional</i></option>
+                    <option class="">Ana Cordoba Coto</option>
+                    <option class="amount">Pamela Rojas Jiménes</option>
+                    <option class="amount">Angie Mora Núñez</option>
+                  </select></label>  
+            </div>
+        
+            <div class="tab-content hide">
+                <label class="title">
+                    <input style="width:500px;" class="form-control round"  type="date" id="start" name="trip-start" value="Date" min="2023-12-6" max="2030-12-31" />
+                    <label><i class='fas fa-plus-circle'></i></label>
+                    <label></label>
+                    <div class="card1">
+                        <div class="card-body p-0">
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>18/10/22</td>
+                                    <td>9:00 AM</td>
+                                    <td><i class="fas fa-times"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>18/10/22</td>
+                                    <td>10:00 AM</td>
+                                    <td><i class="fas fa-times"></i></td>
+                                </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    </div>
+                </label>
+                <br>
+                    <label>
+                        <input style="width: 300px;"  class="form-control amount" placeholder="Hora"/>
+                        <label style="width: 300px;" class="select">
+                            <select class="form-control round" id="exampleFormControlSelect1">
+                            <option value="" disabled selected>AM</i></option>
+                            <option class="">PM</option>
+                          </select></label>  
+                    </label>
+            </div>
+        
+            <div class="tab-content hide">
+                <h4>Citas Sugeridas</h4>
+                <div class="card1">
+                    <div class="card-body p-0">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>18/10/22</td>
+                                <td>9:00 AM</td>
+                            </tr>
+                            <tr>
+                                <td>18/10/22</td>
+                                <td>10:00 AM</td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+                <br>
+                <h4>Cita Agendada por el cliente</h4>
+                <div class="card1">
+                    <div class="card-body p-0">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>18/10/22</td>
+                                <td>9:00 AM</td>
+                                <td><i class="fas fa-times"></i></td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="tab-buttons">
+                <button class="tab-button" id="prev-btn">Anterior</button>
+                <button class="tab-button" id="next-btn">Siguiente</button>
+            </div>
+        
+            
+          </div>
+
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  
+<script>
+   function ShowContain() {
+    let textInput = document.getElementById('staticphone');
+    let text = '89754534';
+    textInput.value = text;
+    
+    let textEmail=document.getElementById('staticemail');
+    let textE='marta.gomez@gmail.com';
+    textEmail.value=textE;
+
+    let textIdCard=document.getElementById('staticIdCard');
+    let textId='302930432';
+    textIdCard.value=textId;
+
+    let textUbication=document.getElementById('staticUbication');
+    let textU='Cartago, Costa Rica';
+    textUbication.value=textU;
+  }
+</script>
+<script>
+    let currentTab = 0;
+    const tabs = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            showTab(index);
+        });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentTab > 0) {
+            currentTab--;
+            showTab(currentTab);
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentTab < tabs.length - 1) {
+            currentTab++;
+            showTab(currentTab);
+        }
+    });
+
+    function showTab(n) {
+        tabContents.forEach((tabContent, index) => {
+            tabContent.classList.add('hide');
+        });
+
+        tabContents[n].classList.remove('hide');
+
+        tabs.forEach((tab, index) => {
+            tab.classList.remove('active');
+        });
+
+        tabs[n].classList.add('active');
+
+        currentTab = n;
+    }
+
+    showTab(currentTab);
+</script>
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE -->
+<script src="../dist/js/adminlte.js"></script>
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="../plugins/chart.js/Chart.min.js"></script>
+<script src="../dist/js/pages/dashboard3.js"></script>
+</body>
+</html>
