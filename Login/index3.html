@@ -64,16 +64,16 @@
           </div>
         </div>
         <div class=" form-group field">
-          <input type="text" placeholder="Usuario" name="user" required minlength="5">
+          <input type="text" placeholder="Usuario" id="user" name="user" required minlength="5">
         </div>
         <div class="form-group field">
-          <input type="password" placeholder="Contraseña" name="password" required minlength="5">
+          <input type="password" placeholder="Contraseña" id="password" name="password" required minlength="5">
         </div>
         <div class="field btn">
           <div class="btn-layer"></div>
-          <input type="submit" value="INGRESAR">
+          <input type="submit" value="INGRESAR" onclick="Login()">
         </div>
-        <div class="pass-link"><a href="#">¿Olvidó su contraseña?</a></div> 
+        <div class="pass-link"><a href="./RecoverPassword.html">¿Olvidó su contraseña?</a></div> 
       </form> <!--Login form end-->
       
       <!--Signup form start-->
@@ -119,7 +119,19 @@
 
 </div>
 
-
+<script>
+  function Login() {
+   let textUser = document.getElementById('user');
+   let textPassword = document.getElementById('password');
+   if (textUser.value == "admin" && textPassword.value == "123") {
+    window.location.href = "../Admin/DashboardAdmin.html";
+   } else if (textUser.value == "worker" && textPassword.value == "123") {
+    window.location.href = "../Colaborador/DashboardWorker.html";
+   }else if (textUser.value == "client" && textPassword.value == "123") {
+    window.location.href = "../Client/DashboardClient.html";
+ }
+ }
+</script>
 <!--Script start-->
 <script src="../dist/js/login.js"></script>
 <!-- jQuery -->
