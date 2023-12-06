@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Process</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- IonIcons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../dist/css/alt/admin.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fa fa-comment" aria-hidden="true"></i>
+        </a>
+      </li>
+      <!-- bell -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fa fa-bell" aria-hidden="true"></i>
+        </a>
+      </li>
+       <!-- user -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class='far fa-user-circle'></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="./processWorker.html" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Perfil
+                  <span class="float-right text-sm text-muted"><i class='fas fa-user-alt'></i></span>
+                </h3>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="../Login/index3.html" class="dropdown-item">
+            <div class="media">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Cerrar sesión
+                  <span class="float-right text-sm text-muted"><i class='fas fa-sign-out-alt'></i></span>
+                </h3>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+        </div>
+      </li>
+     
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-ligth-primary elevation-4">
+    <!-- Brand Logo -->
+  
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+          <br>
+          <br>
+          <li class="nav-item">
+            <a href="./processWorker.html" class="nav-link">
+              <p>
+               Procesos
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./CalendarWorker.html" class="nav-link">
+              <p>
+                Calendario
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+         <!-- /.contain Here  -->
+         <div class="col-4">
+            <h5>Procesos <label></label> <i class='fas fa-plus-circle'></i> </h5>
+                <div class="card-tools">
+                    <div class="input-group input-group-sm" style="width: flex;">
+                    <input type="text" name="table_search" class="form-control float-right"><i>
+                        <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </i>
+                    </div>
+                </div>
+              
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <tbody>
+                    <tr>
+                      <td onclick="ShowContain()">Proceso ID:15 Arreglo PC</td>
+                    </tr>
+                    <tr>
+                      <td>Proceso ID:13 Soporte TI</td>
+                  </tbody>
+                </table>
+              </div>
+              
+            <!-- /.card -->
+          </div>
+          <div class="col-8">
+            <div class="card1">
+              <ul class="nav nav-pills mb-3 shadow-sm" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link1 active" id="pills-description-tab" data-toggle="pill" href="#description" role="tab" aria-controls="pills-home" aria-selected="true">Perfil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link1" id="pills-dates-tab" data-toggle="pill" href="#dates" role="tab" aria-controls="pills-profile" aria-selected="false">Citas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link1" id="pills-process-tab" data-toggle="pill" href="#process" role="tab" aria-controls="pills-contact" aria-selected="false">Seguimiento</a>
+                </li>
+              </ul>
+        
+              <!-- content -->
+              <div class="tab-content" id="pills-tabContent p-3">
+                <!-- 1st card -->
+                <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="pills-home-tab">
+                  
+                  <form>
+                    <div class="form-group row">
+                      <label for="staticname" class="col-sm-4 col-form-label">Nombre del proceso</label>
+                      <input class="form-control amount" id="staticname" />
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticdescription" class="col-sm-4 col-form-label">Descripción del proceso</label>
+                        <input class="form-control amount" id="staticdescription" />
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticneed" class="col-sm-4 col-form-label">Necesidad por resolver</label>
+                        <input class="form-control amount" id="staticneed" />
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticworker" class="col-sm-4 col-form-label">Nombre del Cliente</label>
+                        <input class="form-control amount" id="staticworker"/>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticState" class="col-sm-4 col-form-label">Estado del proceso</label>
+                        <input class="form-control amount" id="staticState"/>
+                    </div>
+                    <label><button class="btn btn-success" style="width: 290px; margin-left: 150px;">Guardar</button></label>
+                  </form>
+                </div>
+                <!-- 2nd card -->
+                <div class="tab-pane fade" id="dates" role="tabpanel" aria-labelledby="pills-profile-tab">
+                  <div class="input-group input-group-sm" style="width: flex;">
+                    <input type="text" name="table_search" class="form-control float-right"><i>
+                        <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </i>
+                    </div>
+                  <br>  
+                  <label><input class="form-control amount" placeholder="Fecha"/></label>
+                  <label>
+                    <select class="form-control round" id="exampleFormControlSelect1">
+                    <option value="" disabled selected>Estado</i></option>
+                    <option class="">Atendida</option>
+                    <option class="amount">Agendada</option>
+                    <option class="amount">Sugerida</option>
+                    <option class="amount">Cancelada</option>
+                  </select></label>
+                  <label><button class="btn btn-success">Filtrar</button></label>
+                 
+                 <div class="card1">
+                  <div class="card-body p-0">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Id</th>
+                          <th>Fecha</th>
+                          <th>Hora</th>
+                          <th>Colaborador</th>
+                          <th>Estado</th>
+                          <th>Servicio</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>13</td>
+                          <td>18/10/22</td>
+                          <td>9:00</td>
+                          <td>Ana Cordoba Coto</td>
+                          <td>Atendida</td>
+                          <td>TI</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>134</td>
+                          <td>18/11/22</td>
+                          <td>9:00</td>
+                          <td>Ana Cordoba Coto</td>
+                          <td>Agendada</td>
+                          <td>TI</td>
+                          <td><i class="fas fa-times"></i></td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+                </div>
+                <!-- 3nd card -->
+                <div class="tab-pane fade" id="process" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <h3>Citas Proceso ID : 15</h3>
+                  <br>  
+                  <a href=""><button style="width:300px; margin-left: 140px;" class="btn btn-success">Sugerir Cita</button></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2023 <a href="https://sacompcr.com/">SAComp Consultores Informáticos</a>.</strong>
+    todos los derechos reservados.
+  </footer>
+</div>
+<!-- ./wrapper -->
+<script>
+   function ShowContain() {
+    let textInput = document.getElementById('staticname');
+    let text = 'Reparación de PC';
+    textInput.value = text;
+    
+    let textEmail=document.getElementById('staticdescription');
+    let textE='Requiero de reparación de la PC HP 15-DA0XXX';
+    textEmail.value=textE;
+
+    let textIdCard=document.getElementById('staticneed');
+    let textId='Revisar computadora  la cual presenta problemas de lentitud y se apaga de forma inesperada';
+    textIdCard.value=textId;
+
+    let textUbication=document.getElementById('staticworker');
+    let textU='Mauricio Solis Rojas';
+    textUbication.value=textU;
+
+    let textState=document.getElementById('staticState');
+    let textS='Por Agendar';
+    textState.value=textS;
+  }
+</script>
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE -->
+<script src="../dist/js/adminlte.js"></script>
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="../plugins/chart.js/Chart.min.js"></script>
+<script src="../dist/js/pages/dashboard3.js"></script>
+</body>
+</html>
