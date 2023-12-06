@@ -1,0 +1,221 @@
+body{
+
+}
+
+.profile{
+  margin-top: 50px;
+  margin-left: -10px;
+}
+
+.profileup{
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-left: 80px;
+}
+
+.perfilupword{
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.line {
+  border-top: 1px solid #6989BE;
+  height: 2px;
+  width: 100%;
+  padding: 0;
+  margin: 20px auto 0 auto;
+}
+
+
+.columns {
+  display: flex;
+  padding-left: 200px;
+  margin-top: 10px;
+}
+
+.column {
+  padding-left: 100px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+
+
+.profileText{
+  margin-top: 100px;
+  margin-left: 320px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+.inputfield{
+  background-color: #E3E7F0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 600px;
+  height: 50px;
+  border: none;
+}
+
+
+.idappointment{
+    margin-left: 1000px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+
+
+.inputfield::placeholder{
+  color: black;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+.inputfield2{
+background-color: #E3E7F0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 280px;
+  height: 50px;
+  border: none;
+}
+
+.inputfield2::placeholder{
+color: black;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+.changeText{
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  margin-left: 650px;
+}
+
+.buttonPassword{
+  border-radius: 12px;
+  border: none;
+  background-color: #455BA5;
+  width: 150px;
+  height: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  margin-left: 650px;
+}
+
+.buttonUpdate{
+  border-radius: 12px;
+  border: none;
+  background-color: #455BA5;
+  width: 150px;
+  height: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  margin-top: 80px;
+  margin-left: 1000px;
+  
+  display: inline-block;
+}
+
+
+
+.btnactions{
+  display: flex;
+  margin-left: -270px;
+  margin-top: 320px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 565px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 350px;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #E8EFFA;
+
+    color: rgb(0, 0, 0);
+  }
