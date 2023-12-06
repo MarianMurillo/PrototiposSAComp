@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HistoryDates</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- IonIcons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="../dist/css/alt/admin.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- X -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="title">
+                <label>Historial de citas</label>
+                <label>Proceso ID: 13</label>
+            </div>
+            <br>
+            <br>
+            
+            <div class="card1">
+                <div class="input-group input-group-sm" style="width: flex;">
+                    <input type="text" name="table_search" class="form-control float-right"><i>
+                        <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </i>
+                </div>
+                  <br>
+                <div class="contentA">  
+                    <input class="form-control amount" placeholder="Fecha"/>
+                    <select class="form-control round" id="exampleFormControlSelect1">
+                    <option value="" disabled selected>Estado</i></option>
+                    <option class="">Atendida</option>
+                    <option class="amount">Agendada</option>
+                    <option class="amount">Sugerida</option>
+                    <option class="amount">Cancelada</option>
+                  </select>
+                  <button class="btn btn-success">Filtrar</button>
+                </div>
+                <div class="card1">
+                    <div class="card-body p-0">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>Id</th>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Colaborador</th>
+                                <th>Estado</th>
+                                <th>Servicio</th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>13</td>
+                                <td>18/10/22</td>
+                                <td>9:00</td>
+                                <td>Ana Cordoba Coto</td>
+                                <td>Atendida</td>
+                                <td>TI</td>
+                                <td><i class='far fa-eye'></i></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>134</td>
+                                <td>18/11/22</td>
+                                <td>9:00</td>
+                                <td>Ana Cordoba Coto</td>
+                                <td>Agendada</td>
+                                <td>TI</td>
+                                <td><i class='far fa-eye'></i></td>
+                                <td><i class="fas fa-times"></i></td>
+                              </tr>
+                              
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button style="margin-left: 500px; width: 300px;"  class="btn btn-success">Sugerir Cita</button>
+            
+          </div>
+
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE -->
+<script src="../dist/js/adminlte.js"></script>
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="../plugins/chart.js/Chart.min.js"></script>
+<script src="../dist/js/pages/dashboard3.js"></script>
+</body>
+</html>

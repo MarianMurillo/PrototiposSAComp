@@ -216,3 +216,12 @@ i.fas.fa-search{
     height: 40px;
     
   }
+  .title{
+    justify-content:space-between;
+    display: flex;
+}
+.contentA{
+  display: flex;
+  width: 500px;
+  margin-left: 300px;
+}
